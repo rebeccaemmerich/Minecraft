@@ -22,7 +22,10 @@ minecraft.initBoard = function(){
         if(($(this).data("i")==5)&&($(this).data("j")>5)){
             $(this).addClass("rocks");
         }
-        if(($(this).data("i")<=5)&&($(this).data("j")<2)){
+        if(($(this).data("i")<=5)&&($(this).data("i")>2)&&($(this).data("j")<2)){
+            $(this).addClass("bark");
+        }
+        if(($(this).data("i")<3)&&($(this).data("j")<3)){
             $(this).addClass("tree");
         }
 		});
@@ -66,6 +69,10 @@ minecraft.modifyBoard = function() {
 			$(this).attr("class","pixel");
 			$("#selected").addClass(type);
 		}
+        if (minecraft.toolActive === "axe" && type === "bark") {
+            $(this).attr("class","pixel");
+            $("#selected").addClass(type);
+        }
 		else {
 			return;
 		}
