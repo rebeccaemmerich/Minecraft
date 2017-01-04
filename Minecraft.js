@@ -37,23 +37,24 @@ minecraft.assignTool = function() {
 }
 
 minecraft.modifyBoard = function() {
+	var type = $(this).attr("class").split(' ')[1];
 	if(minecraft.bordersSky) {
 		if (minecraft.toolActive === "selected") {
 			var activeClass = $("#selected").attr("class").split(' ')[1]
 			$(this).addClass(activeClass);
 			$("#selected").removeClass(activeClass);
 		}
-		if (minecraft.toolActive === "shovel" && $(this).attr("class").split(' ')[1] === "earth") {
+		if (minecraft.toolActive === "shovel" && type === "earth" || type === "surface") {
 			$(this).attr("class","pixel");
-			$("#selected").addClass("earth");
+			$("#selected").addClass(type);
 		}
-		if (minecraft.toolActive === "pickaxe" && $(this).attr("class").split(' ')[1] === "earth") {
+		if (minecraft.toolActive === "pickaxe" && type === "earth") {
 			$(this).attr("class","pixel");
-			$("#selected").addClass("earth");
+			$("#selected").addClass(type);
 		}
-		if (minecraft.toolActive === "axe" && $(this).attr("class").split(' ')[1] === "earth") {
+		if (minecraft.toolActive === "axe" && type === "earth") {
 			$(this).attr("class","pixel");
-			$("#selected").addClass("earth");
+			$("#selected").addClass(type);
 		}
 		else {
 			return;
