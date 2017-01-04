@@ -18,7 +18,13 @@ minecraft.initBoard = function(){
 			}
 		if($(this).data("i")===6){
 			$(this).addClass("surface");
-			} 
+			}
+        if(($(this).data("i")==5)&&($(this).data("j")>5)){
+            $(this).addClass("rocks");
+        }
+        if(($(this).data("i")<=5)&&($(this).data("j")<2)){
+            $(this).addClass("tree");
+        }
 		});
 
 	$(".tool").on("click",minecraft.assignTool);
@@ -44,15 +50,19 @@ minecraft.modifyBoard = function() {
 			$(this).addClass(activeClass);
 			$("#selected").removeClass(activeClass);
 		}
-		if (minecraft.toolActive === "shovel" && type === "earth" || type === "surface") {
+		if (minecraft.toolActive === "shovel" && type === "earth" ) {
 			$(this).attr("class","pixel");
 			$("#selected").addClass(type);
 		}
-		if (minecraft.toolActive === "pickaxe" && type === "earth") {
+        if (minecraft.toolActive === "shovel" && type === "surface" ) {
+            $(this).attr("class","pixel");
+            $("#selected").addClass(type);
+        }
+		if (minecraft.toolActive === "pickaxe" && type === "rocks") {
 			$(this).attr("class","pixel");
 			$("#selected").addClass(type);
 		}
-		if (minecraft.toolActive === "axe" && type === "earth") {
+		if (minecraft.toolActive === "axe" && type === "tree") {
 			$(this).attr("class","pixel");
 			$("#selected").addClass(type);
 		}

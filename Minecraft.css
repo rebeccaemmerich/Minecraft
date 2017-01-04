@@ -31,6 +31,14 @@
 	background-image:url("http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0464/6961/rr12x12_Dirt_Block_2015_shop_thumb.png");
 	background-size:contain;
 }
+.rocks{
+	background-image: url("http://i.imgur.com/4Qy2laz.png");
+	background-size:contain;
+}
+.tree{
+	background-image: url("http://vignette3.wikia.nocookie.net/minecraft-story-mode/images/5/50/Wiki-background/revision/latest?cb=20150708013010");
+	background-size: contain;
+}
 
 .surface {
 	background-image:url("https://s-media-cache-ak0.pinimg.com/736x/cc/b3/7a/ccb37a1c4ee389e6d852bfea31639c0e.jpg");
