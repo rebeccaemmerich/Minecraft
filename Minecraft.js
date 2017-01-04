@@ -1,6 +1,5 @@
 var minecraft = {};
 
-
 minecraft.toolActive = "";
 minecraft.initBoard = function(){ 
 	var gameboard = $("#gameboard");
@@ -19,19 +18,49 @@ minecraft.initBoard = function(){
 			}
 		if($(this).data("i")===6){
 			$(this).addClass("surface");
-		} else {
-			$(this).addClass("sky");
-		}
+			} 
 		});
 
 	$(".tool").on("click",minecraft.assignTool);
+
+}
+
+minecraft.bordersSky = function() {
+	return true;
+	// i = $(this).data("i");
+	// j = $(this).data("j");
+	// console.log($("div[data='"+i+"']"));
 }
 
 minecraft.assignTool = function() {
-	console.log($(this).attr("id"));
+	minecraft.toolActive=$(this).attr("id");
 }
+
 minecraft.modifyBoard = function() {
-	console.log($(this).attr("class").split(' ')[1]);
+	if(minecraft.bordersSky) {
+		if (minecraft.toolActive === "selected") {
+			var activeClass = $("#selected").attr("class").split(' ')[1]
+			$(this).addClass(activeClass);
+			$("#selected").removeClass(activeClass);
+		}
+		if (minecraft.toolActive === "shovel" && $(this).attr("class").split(' ')[1] === "earth") {
+			$(this).attr("class","pixel");
+			$("#selected").addClass("earth");
+		}
+		if (minecraft.toolActive === "pickaxe" && $(this).attr("class").split(' ')[1] === "earth") {
+			$(this).attr("class","pixel");
+			$("#selected").addClass("earth");
+		}
+		if (minecraft.toolActive === "axe" && $(this).attr("class").split(' ')[1] === "earth") {
+			$(this).attr("class","pixel");
+			$("#selected").addClass("earth");
+		}
+		else {
+			return;
+		}
+	} else {
+		return;
+	}
 }
 
 minecraft.initBoard();
