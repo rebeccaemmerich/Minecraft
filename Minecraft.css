@@ -11,10 +11,19 @@
 	background-color:white;
 	height:100%;
 	width:700px;
+	display: inline-block;
 }
 
 #toolbox {
 	background-color: blue;
 	border:solid black 1px;
 	height:1000px;	
+}
+.pixel{
+	display: inline-block;
+	border: solid;
+	border-color: black;
+	height: 10%;
+	width: 10%;
+	padding:  0px;
 }
