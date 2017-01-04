@@ -1,29 +1,70 @@
 #leftpanel {
 	position:relative;
-	background-color: red;
-	border:solid black 1px;
-	height:1000px;
+	background-color: beige;
+	height:800px;
 }
 
 #gameboard {
-	margin-left:100px;
+	margin-left:150px;
 	position:absolute;
 	background-color:white;
 	height:100%;
-	width:700px;
+	width:800px;
 	display: inline-block;
 }
 
 #toolbox {
-	background-color: blue;
+	background-color: maroon;
 	border:solid black 1px;
-	height:1000px;	
+	height:800px;	
 }
 .pixel{
 	display: inline-block;
-	border: solid;
-	border-color: black;
-	height: 10%;
+	border:solid black 1px;
+	height: 9.5%;
 	width: 10%;
-	padding:  0px;
+	margin:-2.0px;
+}
+
+.earth {
+	background-image:url("http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0464/6961/rr12x12_Dirt_Block_2015_shop_thumb.png");
+	background-size:contain;
+}
+
+.surface {
+	background-image:url("https://s-media-cache-ak0.pinimg.com/736x/cc/b3/7a/ccb37a1c4ee389e6d852bfea31639c0e.jpg");
+	background-size:contain;
+}
+
+.sky {
+	background-color:#4997D0;
+}
+
+.tool{
+	margin:40px;
+	height:100px;
+	width:100px;
+	border:solid white 1px;
+}
+
+#selected {
+	height:60px;
+	width:60px;
+	margin:60px;
+	border:solid white 1px;
+}
+
+#pickaxe {
+	background-image:url("https://s-media-cache-ak0.pinimg.com/originals/11/06/c4/1106c4d5dbedc0e79df22453bbe55b3e.jpg");
+	background-size:contain;
+}
+
+#axe {
+	background-image:url("https://theminecraftdictionary.files.wordpress.com/2014/06/minecraft-axe.png");
+	background-size:contain;
+}
+
+#shovel{
+	background-image:url("http://orig13.deviantart.net/b621/f/2015/028/0/0/minecraft_iron_shovel_ll_by_dragonshadow3-d8fr870.png");
+	background-size:contain;
 }
