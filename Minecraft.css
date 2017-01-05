@@ -46,7 +46,7 @@
 
 .surface {
 	background-image:url("https://s-media-cache-ak0.pinimg.com/736x/cc/b3/7a/ccb37a1c4ee389e6d852bfea31639c0e.jpg");
-	background-size:contain;
+	background-size:cover;
 }
 
 
