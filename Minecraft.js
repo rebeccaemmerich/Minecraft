@@ -22,7 +22,7 @@ minecraft.initBoard = function(){
         if(($(this).data("i")==5)&&($(this).data("j")>5)){
             $(this).addClass("rocks");
         }
-        if(($(this).data("i")<=5)&&($(this).data("i")>2)&&($(this).data("j")<2)){
+        if(($(this).data("i")<=5)&&($(this).data("i")>2)&&($(this).data("j")<2)&&($(this).data("j")>0)){
             $(this).addClass("bark");
         }
         if(($(this).data("i")<3)&&($(this).data("j")<3)){
