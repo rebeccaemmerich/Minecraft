@@ -11,6 +11,7 @@
 	height:100%;
 	width:800px;
 	display: inline-block;
+
 }
 
 #toolbox {
@@ -20,15 +21,15 @@
 }
 .pixel{
 	display: inline-block;
-	border:solid black 1px;
 	height: 9.5%;
 	width: 10%;
-	margin:-2.0px;
-	background-color:#4997D0;
+	margin:-2.3px;
+	background-image: url("https://static.pexels.com/photos/31231/pexels-photo.jpg");
+
 }
 
 .earth {
-	background-image:url("http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0464/6961/rr12x12_Dirt_Block_2015_shop_thumb.png");
+	background-image:url("http://static.planetminecraft.com/files/resource_media/screenshot/1236/pack_3530346_thumb.jpg");
 	background-size:contain;
 }
 .rocks{
