@@ -1,5 +1,11 @@
 var minecraft = {};
 
+minecraft.rules = {
+	shovel:["earth","surface"],
+	pickaxe:["rocks"],
+	axe:["tree","bark"]
+};
+
 minecraft.toolActive = "";
 minecraft.initBoard = function(){ 
 	var gameboard = $("#gameboard");
@@ -41,13 +47,6 @@ minecraft.extractType = function(object,type) {
 	$("#selected").addClass(type);
 }
 
-minecraft.bordersSky = function() {
-	return true;
-	// i = $(this).data("i");
-	// j = $(this).data("j");
-	// console.log($("div[data='"+i+"']"));
-}
-
 minecraft.assignTool = function() {
 	minecraft.toolActive=$(this).attr("id");
 }
@@ -55,38 +54,18 @@ minecraft.assignTool = function() {
 minecraft.modifyBoard = function() {
 	var pixel = $(this);
 	var type = pixel.attr("class").split(' ')[1];
-	if(minecraft.bordersSky) {
-		if(minecraft.toolActive === "selected") {
-			var activeClass = $("#selected").attr("class").split(' ')[1];
-			$(this).addClass(activeClass);
-			$("#selected").removeClass(activeClass);
-		}
-		if (minecraft.toolActive === "shovel" && type === "earth" ) {
-			minecraft.extractType(pixel,type);
-
-		}
-        if (minecraft.toolActive === "shovel" && type === "surface" ) {
-            minecraft.extractType(pixel,type);
-
-        }
-		if (minecraft.toolActive === "pickaxe" && type === "rocks") {
-			minecraft.extractType(pixel,type);
-
-		}
-		if (minecraft.toolActive === "axe" && type === "tree") {
-			minecraft.extractType(pixel,type);
-
-		}
-        if (minecraft.toolActive === "axe" && type === "bark") {
-            minecraft.extractType(pixel,type);
-
-        }
-		else {
-			return;
-		}
-	} else {
+	if(minecraft.toolActive === "selected") {
+		var activeClass = $("#selected").attr("class").split(' ')[1];
+		$(this).addClass(activeClass);
+		$("#selected").removeClass(activeClass);
+	}
+	if((minecraft.rules[minecraft.toolActive]).includes(type)) {
+		minecraft.extractType(pixel,type);
+	} 
+	else {
 		return;
 	}
 }
+
 
 minecraft.initBoard();
