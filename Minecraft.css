@@ -1,7 +1,20 @@
+#Page1{
+	display: block;
+	height: 780px;
+	width: 100%;
+	background-image: url("http://cdn.photogyps.com/images/img.espicture.ru/5/kartinki-2048-1152-minecraft-18.jpg");
+	background-size: contain;
+	text-align: center;
+	font-size: 40px;
+	font-family: Avenir;
+	background-repeat: no-repeat;
+
+}
 #leftpanel {
 	position:relative;
-	background-color: beige;
+	background-image: url("http://cdn.photogyps.com/images/img.espicture.ru/5/kartinki-2048-1152-minecraft-18.jpg");
 	height:800px;
+	margin-left: -6px;
 }
 
 #gameboard {
@@ -15,9 +28,10 @@
 }
 
 #toolbox {
-	background-color: maroon;
+	background-image: url("http://cdn.photogyps.com/images/img.espicture.ru/5/kartinki-2048-1152-minecraft-18.jpg");
 	border:solid black 1px;
-	height:800px;	
+	height:800px;
+	margin-left: -5px;
 }
 .pixel{
 	display: inline-block;

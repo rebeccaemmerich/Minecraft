@@ -7,7 +7,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-	<div class = "row">
+<div id="Page1">
+	<div>WELCOME TO MINECRAFT</div>
+	<button type = 'submit' id = 'start' href="#" onclick=(document.getElementById("game").style.display='block');(document.getElementById("Page1").style.display='none')>START THE GAME</button>
+</div>
+	<div id = "game" class = "row" style= "display: none">
 		<div class = "col-md-10 col-xs-10" id = "leftpanel">
 			<div class = "container" id = "gameboard"></div>
 		</div>
